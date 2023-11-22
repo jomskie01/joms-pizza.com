@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>PIZZA ORDERING</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   
+<!-- header section starts  -->
+
+<header class="header">
+
+   <section class="flex">
+
+      <a href="#home" class="logo">JOM'S Pizza</a>
+
+      <nav class="navbar">
+         <a href="#home">home</a>
+         <a href="#about">about</a>
+         <a href="#menu">menu</a>
+         <a href="#order">order</a>
+      </nav>
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+         <div id="order-btn" class="fas fa-box"></div>
+         <div id="cart-btn" class="fas fa-shopping-cart"><span>(2)</span></div>
+      </div>
+
+   </section>
+
+</header>
+
+<!-- header section ends -->
+
+<div class="user-account">
+
+   <section>
+
+      <div id="close-account"><span>close</span></div>
+
+      <div class="user">
+         <p><span>you are not logged in now!</span></p>
+      </div>
+
+      <div class="display-orders">
+         <p>Hawaiian<span>( ₱149 )</span></p>
+         <p>Overload Cheese <span>( ₱155 )</span></p>
+         <p>All Meat<span>( ₱169 )</span></p>
+         <p>Supreme Vegie <span>( ₱149 )</span></p>
+      </div>
+
+      <div class="flex">
+
+         <form action="" method="post">
+            <h3>login now</h3>
+            <input type="email" name="email" required class="box" placeholder="enter your email" maxlength="50">
+            <input type="password" name="pass" required class="box" placeholder="enter your password" maxlength="20">
+            <input type="submit" value="login now" name="login" class="btn">
+         </form>
+
+         <form action="" method="post">
+            <h3>register now</h3>
+            <input type="text" name="name" required class="box" placeholder="enter your name" maxlength="20">
+            <input type="email" name="email" required class="box" placeholder="enter your email" maxlength="50">
+            <input type="password" name="pass" required class="box" placeholder="enter your password" maxlength="20">
+            <input type="password" name="cpass" required class="box" placeholder="confirm your password" maxlength="20">
+            <input type="submit" value="register now" name="register" class="btn">
+         </form>
+
+      </div>
+
+   </section>
+
+</div>
+
+<div class="my-orders">
+
+   <section>
+
+      <div id="close-orders"><span>close</span></div>
+
+      <h3 class="title"> my orders </h3>
+
+      <div class="box">
+         <p>placed on : <span>11/10/2022</span> </p>
+         <p>name : <span>Juan Dela Cruz</span> </p>
+         <p>number : <span>1234567890</span></p>
+         <p>address : <span>Project 2, Block 1, House No. 8657, Quezon City</span></p>
+         <p>payment method : <span>cash on delivery</span></p>
+         <p>your orders : <span>Hawaiian ₱149 - x 2, All Meat ₱169 - x 1</span></p>
+         <p>total price : <span>₱467/-</span></p>
+         <p>payment status : <span style="color: var(--red);">pending</span> </p>
+      </div>
+
+   </section>
+
+</div>
+
+<div class="shopping-cart">
+
+   <section>
+
+      <div id="close-cart"><span>close</span></div>
+
+      <div class="box">
+         <a href="#" class="fas fa-times"></a>
+         <img src="images/2.jpg" alt="">
+         <div class="content">
+            <p>Hawaiian <span>(₱149/- x2)</span></p>
+            <form action="" method="post">
+               <input type="number" class="qty" name="qty" min="1" value="2" max="100">
+               <button type="submit" class="fas fa-edit" name="update_qty"></button>
+            </form>
+         </div>
+      </div>
+
+      <div class="box">
+         <a href="#" class="fas fa-times"></a>
+         <img src="images/3.jpg" alt="">
+         <div class="content">
+            <p>All Meat <span>(₱169/- x1)</span></p>
+            <form action="" method="post">
+               <input type="number" class="qty" name="qty" min="1" value="1" max="100">
+               <button type="submit" class="fas fa-edit" name="update_qty"></button>
+            </form>
+         </div>
+      </div>
+
+
+      <a href="#order" class="btn">order now</a>
+
+   </section>
+
+</div>
+
+<div class="home-bg">
+
+   <section class="home" id="home">
+
+      <div class="slide-container">
+
+         <div class="slide active">
+            <div class="image">
+               <img src="images/Pepperoni.png" alt="">
+            </div>
+            <div class="content">
+               <h3>Pepperoni Pizza</h3>
+               <div class="fas fa-angle-left" onclick="prev()"></div>
+               <div class="fas fa-angle-right" onclick="next()"></div>
+            </div>
+         </div>
+
+         <div class="slide">
+            <div class="image">
+               <img src="images/Mushroom.png" alt="">
+            </div>
+            <div class="content">
+               <h3>Mushroom Cheese</h3>
+               <div class="fas fa-angle-left" onclick="prev()"></div>
+               <div class="fas fa-angle-right" onclick="next()"></div>
+            </div>
+         </div>
+
+         <div class="slide">
+            <div class="image">
+               <img src="images/OCheese.png" alt="">
+            </div>
+            <div class="content">
+               <h3>Overload Cheese</h3>
+               <div class="fas fa-angle-left" onclick="prev()"></div>
+               <div class="fas fa-angle-right" onclick="next()"></div>
+            </div>
+         </div>
+
+      </div>
+
+   </section>
+
+</div>
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+   <h1 class="heading">about us</h1>
+
+   <div class="box-container">
+
+      <div class="box">
+         <img src="images/about-1.svg" alt="">
+         <h3>made with love</h3>
+         <a href="#menu" class="btn">our menu</a>
+      </div>
+
+      <div class="box">
+         <img src="images/about-2.svg" alt="">
+         <h3>30 minutes delivery</h3>
+         <a href="#menu" class="btn">our menu</a>
+      </div>
+
+      <div class="box">
+         <img src="images/about-3.svg" alt="">
+         <h3>share with your friends</h3>
+         <a href="#menu" class="btn">our menu</a>
+      </div>
+
+   </div>
+
+</section>
+
+<!-- about section ends -->
+
+<!-- menu section starts  -->
+
+<section id="menu" class="menu">
+
+   <h1 class="heading">our menu</h1>
+
+   <div class="box-container">
+
+      <div class="box">
+         <div class="price">₱<span>149</span>/-</div>
+         <img src="images/2.jpg" alt="">
+         <div class="name">Hawaiian Pizza</div>
+         <form action="" method="post">
+            <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+            <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+         </form>
+      </div>
+
+      <div class="box">
+         <div class="price">₱<span>155</span>/-</div>
+         <img src="images/pizza-6.jpg" alt="">
+         <div class="name">Overload Cheese</div>
+         <form action="" method="post">
+            <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+            <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+         </form>
+      </div>
+
+      <div class="box">
+         <div class="price">₱<span>169</span>/-</div>
+         <img src="images/3.jpg" alt="">
+         <div class="name">All Meat Pizza!</div>
+         <form action="" method="post">
+            <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+            <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+         </form>
+      </div>
+
+      <div class="box">
+         <div class="price">₱<span>149</span>/-</div>
+         <img src="images/SupVeg.jpg" alt="">
+         <div class="name">Supreme Vegie</div>
+         <form action="" method="post">
+            <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+            <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+         </form>
+      </div>
+
+      <div class="box">
+         <div class="price">₱<span>155</span>/-</div>
+         <img src="images/Pepperoni.png" alt="">
+         <div class="name">Pepperoni Pizza</div>
+         <form action="" method="post">
+            <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+            <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+         </form>
+      </div>
+
+
+   </div>
+
+</section>
+
+<!-- menu section ends -->
+
+<!-- order section starts  -->
+
+<section class="order" id="order">
+
+   <h1 class="heading">order now</h1>
+
+   <form action="" method="post">
+
+
+      <div class="flex">
+         <div class="inputBox">
+            <span>your name :</span>
+            <input type="text" name="name" class="box" required placeholder="enter your name" maxlength="20">
+         </div>
+         <div class="inputBox">
+            <span>your number :</span>
+            <input type="number" name="number" class="box" required placeholder="enter your number" min="0">
+         </div>
+         <div class="inputBox">
+            <span>payment method</span>
+            <select name="method" class="box">
+               <option value="cash on delivery">cash on delivery</option>
+               <option value="credit card">credit card</option>
+               <option value="paytm">G-Cash</option>
+               <option value="paypal">paymaya</option>
+            </select>
+         </div>
+         <div class="inputBox">
+            <span>address :</span>
+            <input type="text" name="flat" class="box" required placeholder="san juanico st. etc" maxlength="50">
+         </div>
+         <div class="inputBox">
+            <span>pin code :</span>
+            <input type="number" name="pin_code" class="box" required placeholder="e.g. 123456" min="0">
+         </div>
+      </div>
+
+      <input type="submit" value="order now" class="btn" name="order">
+
+   </form>
+
+</section>
+
+<!-- order section ends -->
+
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+   <div class="box-container">
+
+      <div class="box">
+         <i class="fas fa-phone"></i>
+         <h3>phone number</h3>
+         <p>(+63) 90912345678</p>
+      </div>
+
+      <div class="box">
+         <i class="fas fa-map-marker-alt"></i>
+         <h3>our address</h3>
+         <p>Angat, Bulacan</p>
+      </div>
+
+      <div class="box">
+         <i class="fas fa-clock"></i>
+         <h3>opening hours</h3>
+         <p>8:30am to 9:30pm</p>
+      </div>
+
+      <div class="box">
+         <i class="fas fa-envelope"></i>
+         <h3>email address</h3>
+         <p>Jomspizza01@gmail.com</p>
+      </div>
+
+   </div>
+
+   <div class="credit">
+      &copy; copyright @ 2022 | <span>PIZZA ORDERING</span> | all rights reserved!
+   </div>
+
+</section>
+
+<!-- footer section ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
